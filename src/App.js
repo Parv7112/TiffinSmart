@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import "../src/utils/Style.css";
+import ScrollToTop from "react-scroll-to-top"
 
-function App() {
+
+import Routers from "./pages/Routers";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
+
+const App = () => {
+
+  
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routers />
+      <ScrollToTop/>
+    </>
   );
-}
+};
 
 export default App;
